@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.test4.fragments.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_fiveDimensionalFragment"
+            app:destination="@id/fiveDimensionalFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_fourDimensionalFragment"
+            app:destination="@id/fourDimensionalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.test4.fragments.ThreeDimensionalFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_three_dimensional" />
+    <fragment
+        android:id="@+id/fiveDimensionalFragment"
+        android:name="com.example.test4.fragments.FiveDimensionalFragment"
+        android:label="fragment_five_dimensional"
+        tools:layout="@layout/fragment_five_dimensional" />
+    <fragment
+        android:id="@+id/fourDimensionalFragment"
+        android:name="com.example.test4.fragments.FourDimensionalFragment"
+        android:label="fragment_four_dimensional"
+        tools:layout="@layout/fragment_four_dimensional" />
+</navigation>
